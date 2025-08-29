@@ -27,7 +27,7 @@ const Header = () => {
       <div
         className={`h-screen relative w-full p-8 bg-[url('/images/ozkan-guner-Pc8lpKJwecM-unsplash.jpg')] bg-cover bg-center`}
       >
-        <div className="absolute inset-0  bg-blue-500/45"></div>
+        <div className="absolute inset-0  bg-gradient-to-r from-blue-500/50 to-green-500/50"></div>
 
         <div className="relative z-10 h-full flex flex-col justify-between">
           <div className="w-full md:w-[40%] mt-20">

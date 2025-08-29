@@ -13,7 +13,7 @@ const FooterLayout = () => {
   ];
 
   return (
-    <div className="w-full bg-sky-500 mt-20">
+    <div className="w-full bg-gradient-to-r from-blue-500 to-green-500 mt-20">
       <div className="py-10 px-5 flex flex-col md:flex-row md:items-start md:justify-between gap-10 md:gap-5 max-w-7xl md:mr-10 mx-auto">
         <div className="flex items-center space-x-2 justify-center md:justify-start">
           <Image
