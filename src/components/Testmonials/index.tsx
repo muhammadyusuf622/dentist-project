@@ -6,19 +6,20 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
-import badTeeth1 from '../../../public/images/teeth/badtooth3.jpg'
-import badTeeth2 from '../../../public/images/teeth/badteethblackman.jpeg'
-import badTeeth3 from '../../../public/images/teeth/badtooth1.jpeg'
-import badTeeth4 from '../../../public/images/teeth/badtooth4.jpg'
-import goodTeeth1 from '../../../public/images/teeth/goodtooth1.png'
-import goodTeeth2 from '../../../public/images/teeth/goodteethblackman.jpg'
-import goodTeeth3 from '../../../public/images/teeth/goodtooth3.jpg'
-import goodTeeth4 from '../../../public/images/teeth/goodtooth5.jpg'
+import badTeeth1 from "../../../public/images/teeth/badtooth3.jpg";
+import badTeeth2 from "../../../public/images/teeth/badteethblackman.jpeg";
+import badTeeth3 from "../../../public/images/teeth/badtooth1.jpeg";
+import badTeeth4 from "../../../public/images/teeth/badtooth4.jpg";
+import goodTeeth1 from "../../../public/images/teeth/goodtooth1.png";
+import goodTeeth2 from "../../../public/images/teeth/goodteethblackman.jpg";
+import goodTeeth3 from "../../../public/images/teeth/goodtooth3.jpg";
+import goodTeeth4 from "../../../public/images/teeth/goodtooth5.jpg";
 
-import man1Img from '../../../public/images/human/blackmanImageteeth.jpg'
-import man2Img from '../../../public/images/human//teeth2-man.jpg'
-import girl1Img from '../../../public/images/human/girl1teeth.jpg'
-import girl2Img from '../../../public/images/human/girlteeth2.jpg'
+import man1Img from "../../../public/images/human/blackmanImageteeth.jpg";
+import man2Img from "../../../public/images/human//teeth2-man.jpg";
+import girl1Img from "../../../public/images/human/girl1teeth.jpg";
+import girl2Img from "../../../public/images/human/girlteeth2.jpg";
+import FadeInSection from "../FadeInSection";
 
 type CaseStudy = {
   id: string;
@@ -114,49 +115,59 @@ const TestmonialsComponents = () => {
   );
 
   return (
-    <section className="mt-20 w-[90%] m-auto">
-      <div className="text-center">
-        <p className="uppercase tracking-wide text-slate-500 text-sm">
-          TESTIMONIALS
-        </p>
-        <h2 className="text-3xl md:text-5xl font-semibold text-slate-800 mt-3">
-          Haqiqiy hikoyalar. Haqiqiy tabassumlar.
-        </h2>
-        <p className="text-slate-500 max-w-2xl mx-auto mt-3">
-          Hech narsa haqiqatni boshdan kechirganlarning so'zlaridan balandroq
-          gapirmaydi, birinchi qo'ldan ko'rinadigan o'zgarishlar.
-        </p>
-      </div>
+    <section id="testimonials" className="mt-20 w-[90%] m-auto">
+      <FadeInSection>
+        <div className="text-center mb-13">
+          <p className="uppercase tracking-wide text-slate-500 text-sm">
+            TESTIMONIALS
+          </p>
+          <h2 className="text-3xl md:text-5xl font-semibold text-blue-900 mt-3">
+            Haqiqiy hikoyalar. Haqiqiy tabassumlar
+          </h2>
+          <p className="text-slate-500 max-w-2xl mx-auto mt-3">
+            Hech narsa haqiqatni boshdan kechirganlarning so'zlaridan balandroq
+            gapirmaydi, birinchi qo'ldan ko'rinadigan o'zgarishlar
+          </p>
+        </div>
+      </FadeInSection>
 
-      <div className="flex justify-center gap-2  md:gap-8 mt-8">
-        {categories.map((cat) => (
-          <button
-            key={cat.id}
-            onClick={() => setActiveCategory(cat.id)}
-            className={`pb-2 text-slate-600 hover:text-slate-800 cursor-pointer font-bold transition-colors ${
-              activeCategory === cat.id
-                ? "border-b-2 border-sky-500 text-slate-800"
-                : ""
-            }`}
-          >
-            {cat.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="mt-10">
-        <Swiper
-          pagination={{ type: "fraction" }}
-          navigation
-          modules={[Pagination, Navigation]}
+      <FadeInSection>
+        <div
+          className="flex justify-start md:justify-center relative gap-2 md:gap-8 border-b border-gray-300 
+                w-full md:w-[45.2%] mx-auto mt-8 overflow-x-auto scrollbar-hide"
         >
-          {cases.map((item) => (
-            <SwiperSlide key={item.id}>
-              <CaseSlide item={item} />
-            </SwiperSlide>
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setActiveCategory(cat.id)}
+              className={`pb-2 text-sm sm:text-base text-sky-500 whitespace-nowrap
+        hover:text-blue-900 cursor-pointer font-bold transition-colors ${
+          activeCategory === cat.id
+            ? "border-b-2 border-sky-700 text-sky-700"
+            : ""
+        }`}
+            >
+              {cat.label}
+            </button>
           ))}
-        </Swiper>
-      </div>
+        </div>
+      </FadeInSection>
+
+      <FadeInSection>
+        <div className="mt-10">
+          <Swiper
+            pagination={{ type: "fraction" }}
+            navigation
+            modules={[Pagination, Navigation]}
+          >
+            {cases.map((item) => (
+              <SwiperSlide key={item.id}>
+                <CaseSlide item={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </FadeInSection>
     </section>
   );
 };
@@ -165,12 +176,12 @@ const CaseSlide = ({ item }: { item: CaseStudy }) => {
   return (
     <div className="grid md:grid-cols-12 gap-8 items-center">
       <div className="md:col-span-4">
-        <h3 className="text-2xl md:text-3xl font-semibold text-slate-800">
+        <h3 className="text-2xl md:text-3xl  font-semibold text-blue-900">
           {item.title}
         </h3>
         <p className="text-slate-600 mt-3">{item.description}</p>
         <div className="mt-6">
-          <p className="font-semibold text-slate-800 mb-2">Biz nima qildik</p>
+          <p className="font-semibold text-blue-900 mb-2">Biz nima qildik</p>
           <ul className="space-y-2 text-slate-700">
             {item.bullets.map((b) => (
               <li key={b} className="flex gap-2">

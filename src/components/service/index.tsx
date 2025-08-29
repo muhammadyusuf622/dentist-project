@@ -59,7 +59,7 @@ const ServiceComponents = () => {
   ];
 
   return (
-    <div>
+    <div id="services">
       <FadeInSection>
         <div className="flex w-full m-auto flex-col gap-5">
           <h4 className="text-blue-700 uppercase text-center">services</h4>

@@ -27,10 +27,11 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "home" },
+    { name: "About", href: "about" },
+    { name: "Services", href: "services" },
+    { name: "Contact", href: "contact" },
+    { name: "Testimonials", href: "testimonials" },
   ];
 
   return (
@@ -59,6 +60,16 @@ const Navbar = () => {
               <span
                 key={item.name}
                 className="text-blue-700/90 cursor-pointer hover:text-blue-900 transition-colors duration-200 font-medium relative group"
+                onClick={() => {
+                  const element = document.getElementById(item.href);
+                  if (element) {
+                    const y =
+                      element.getBoundingClientRect().top +
+                      window.scrollY -
+                      100;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-900 transition-all duration-200 group-hover:w-full"></span>

@@ -49,7 +49,7 @@ function AboutUsComponents() {
   const isMobile = useIsMobail();
 
   return (
-    <div className="max-w-5xl mx-auto p-6 relative mt-30">
+    <div id="about" className="max-w-5xl mx-auto p-6 relative mt-30">
       <div className="mb-6 md:w-[50%]">
         <h2 className="md:text-4xl text-3xl font-bold  text-blue-900 mb-6">
           Sizning tabassumingiz ortidagi fikrlar bilan tanishing

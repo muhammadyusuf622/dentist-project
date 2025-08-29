@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="h-1400">
+    <div className="">
       <HeaderComponents />
       <div className="md:w-[1300px] w-[370px] m-auto mt-30">
         <ServiceComponents />

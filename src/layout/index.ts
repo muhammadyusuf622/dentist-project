@@ -1,1 +1,2 @@
-export {default as NavbarPage} from "./Navbar";
+export {default as NavbarLayout} from "./Navbar";
+export {default as FooterLayout} from "./Footer";

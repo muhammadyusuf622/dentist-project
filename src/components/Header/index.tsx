@@ -23,7 +23,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div>
+    <div id="home">
       <div
         className={`h-screen relative w-full p-8 bg-[url('/images/ozkan-guner-Pc8lpKJwecM-unsplash.jpg')] bg-cover bg-center`}
       >
