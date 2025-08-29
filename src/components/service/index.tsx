@@ -61,7 +61,7 @@ const ServiceComponents = () => {
   return (
     <div>
       <FadeInSection>
-        <div className="flex w-[90%] m-auto md:w-full flex-col gap-5">
+        <div className="flex w-full m-auto flex-col gap-5">
           <h4 className="text-blue-700 uppercase text-center">services</h4>
           <h2 className="text-blue-800 text-2xl md:text-4xl text-center">
             Har bir tabassum uchun mutaxassis g'amxo'rlik qiladi

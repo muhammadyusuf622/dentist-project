@@ -58,7 +58,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <span
                 key={item.name}
-                className="text-blue-700/90 hover:text-blue-900 transition-colors duration-200 font-medium relative group"
+                className="text-blue-700/90 cursor-pointer hover:text-blue-900 transition-colors duration-200 font-medium relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-900 transition-all duration-200 group-hover:w-full"></span>
@@ -104,7 +104,7 @@ const Navbar = () => {
               {navItems.map((item) => (
                 <span
                   key={item.name}
-                  className="block text-white/90 hover:text-white/70 transition-colors duration-200 font-medium py-2"
+                  className="block text-white/90 cursor-pointer hover:text-white/70 transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
