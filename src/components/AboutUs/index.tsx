@@ -119,6 +119,28 @@ function AboutUsComponents() {
           </button>
         </div>
       </FadeInSection>
+      <FadeInSection>
+        <a
+          href="https://telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            background: "linear-gradient(to left, #22c55e, #3b82f6)",
+            backgroundSize: "200% 100%",
+            backgroundPosition: "left",
+            transition: "background-position 0.3s ease-in-out",
+          }}
+          className="px-6 py-3 rounded-xl w-full md:w-full text-center font-semibold shadow-xl mt-20 text-white inline-block"
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.backgroundPosition = "right")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.backgroundPosition = "left")
+          }
+        >
+          Hoziroq Shifokor ko'rigiga yoziling
+        </a>
+      </FadeInSection>
     </div>
   );
 }

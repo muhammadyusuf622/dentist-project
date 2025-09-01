@@ -7,7 +7,13 @@ const Header = () => {
   const [experts, setExperts] = useState(0);
 
   useEffect(() => {
-    const incrementCounter = (value: number, setter: any, target: number, interval: number, step = 1) => {
+    const incrementCounter = (
+      value: number,
+      setter: any,
+      target: number,
+      interval: number,
+      step = 1
+    ) => {
       let count = value;
       const timer = setInterval(() => {
         count += step;
@@ -17,7 +23,7 @@ const Header = () => {
     };
 
     incrementCounter(excellence, setExcellence, 15, 20);
-    incrementCounter(satisfaction, setSatisfaction, 98, 10); 
+    incrementCounter(satisfaction, setSatisfaction, 98, 10);
     incrementCounter(smiles, setSmiles, 5000, 1);
     incrementCounter(experts, setExperts, 17, 20);
   }, []);
@@ -35,7 +41,28 @@ const Header = () => {
               Mukammallikni kashf eting. Celestia tabassumlaridagi farqni kashf
               eting. Selestiyada
             </p>
-            <p className="text-white mt-10 md:block hidden">
+            <a
+              href="https://telegram"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: "linear-gradient(to left, #22c55e, #3b82f6)",
+                backgroundSize: "200% 100%",
+                backgroundPosition: "left",
+                transition: "background-position 0.3s ease-in-out",
+              }}
+              className="px-6 py-3 rounded-xl font-semibold shadow-xl mt-5 text-white inline-block"
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundPosition = "right")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundPosition = "left")
+              }
+            >
+              Hoziroq Joy Band Qiling
+            </a>
+
+            <p className="text-white mt-5 md:block hidden">
               Celestia Tabassumida biz sizning tabassumingiz g'amxo'rlikdan
               ko'ra ko'proq narsaga loyiq ekanligiga ishonamiz - bu bayramga
               loyiqdir. Kengash tomonidan sertifikatlangan mutaxassislarimiz eng

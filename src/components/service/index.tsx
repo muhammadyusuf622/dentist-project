@@ -5,7 +5,7 @@ import aqilTishImg from "../../../public/images/aqil-tish.png";
 import milkImg from "../../../public/images/milk.png";
 import boldTishImg from "../../../public/images/boldlik-tish.png";
 import Image from "next/image";
-import background2 from "../../../public/images/backgrount-tooth.jpg";
+import background2 from "../../../public/images/baccgroundImagesTeeth.jpg";
 import FadeInSection from "../FadeInSection";
 
 interface IService {

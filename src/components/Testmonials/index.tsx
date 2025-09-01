@@ -20,6 +20,7 @@ import man2Img from "../../../public/images/human//teeth2-man.jpg";
 import girl1Img from "../../../public/images/human/girl1teeth.jpg";
 import girl2Img from "../../../public/images/human/girlteeth2.jpg";
 import FadeInSection from "../FadeInSection";
+import { FaTelegram } from "react-icons/fa";
 
 type CaseStudy = {
   id: string;
@@ -115,7 +116,7 @@ const TestmonialsComponents = () => {
   );
 
   return (
-    <section id="testimonials" className="mt-20 w-[90%] m-auto">
+    <section id="testimonials" className="mt-15 w-[90%] m-auto">
       <FadeInSection>
         <div className="text-center mb-13">
           <p className="uppercase tracking-wide text-slate-500 text-sm">
@@ -168,6 +169,27 @@ const TestmonialsComponents = () => {
           </Swiper>
         </div>
       </FadeInSection>
+
+      <a
+        href="https://telegram"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          background: "linear-gradient(to left, #22c55e, #3b82f6)",
+          backgroundSize: "200% 100%",
+          backgroundPosition: "left",
+          transition: "background-position 0.3s ease-in-out",
+        }}
+        className="px-6 py-3 flex justify-center gap-7 items-center w-full text-center text-2xl rounded-xl font-semibold shadow-xl mt-20 text-white"
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.backgroundPosition = "right")
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.backgroundPosition = "left")
+        }
+      >
+        <span>Hoziroq Joy Band Qiling</span> <FaTelegram className="md:text-4xl text-7xl" />
+      </a>
     </section>
   );
 };
