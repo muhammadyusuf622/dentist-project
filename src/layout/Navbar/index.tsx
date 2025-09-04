@@ -95,7 +95,7 @@ const Navbar = ({text1, text2, text3, text4, text5}: Scrolls) => {
               aria-label="Toggle menu"
             >
               <svg
-                className="w-6 h-6"
+                className="w-6 h-6 text-black"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ const Navbar = ({text1, text2, text3, text4, text5}: Scrolls) => {
               {navItems.map((item, index) => (
                 <span
                   key={index}
-                  className="block text-white/90 cursor-pointer hover:text-white/70 transition-colors duration-200 font-medium py-2"
+                  className="block text-white/90 capitalize cursor-pointer hover:text-white/70 transition-colors duration-200 font-medium py-2"
                   onClick={() => {
                     const element = document.getElementById(
                       item.href as string

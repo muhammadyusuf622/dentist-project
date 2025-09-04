@@ -1,22 +1,22 @@
 "use client"
-import { NavbarLayout } from "@/layout";
+import { FooterLayout, NavbarLayout } from "@/layout";
 import React from "react";
 import { FaBolt, FaClock, FaPercent, FaComments } from "react-icons/fa";
 import { BsTelegram } from "react-icons/bs";
 
 
-const TELEGRAM_BOT_URL = "https://t.me/your_bot_username";
+const TELEGRAM_BOT_URL = "https://t.me/stomatolog_booking_bot";
 
 const Doctor = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen justify-between">
       <NavbarLayout
         text1="hero"
         text2="benefits"
         text3="testimonials"
         text4="contact"
       />
-      <div className="md:w-[1310px] w-[370px] m-auto mt-10 md:mt-20">
+      <div className="md:w-[1310px] w-[370px] m-auto mt-20 md:mt-20">
         {/* Hero Section */}
         <section
           id="hero"
@@ -150,6 +150,12 @@ const Doctor = () => {
           </form>
         </section>
       </div>
+      <FooterLayout
+        text1="hero"
+        text2="benefits"
+        text3="testimonials"
+        text4="contact"
+      />
     </div>
   );
 };
