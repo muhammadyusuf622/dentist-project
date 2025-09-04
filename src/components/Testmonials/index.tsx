@@ -116,7 +116,7 @@ const TestmonialsComponents = () => {
   );
 
   return (
-    <section id="testimonials" className="mt-15 w-[90%] m-auto">
+    <section id="testimonials" className="mt-15 md:w-full w-[90%] m-auto">
       <FadeInSection>
         <div className="text-center mb-13">
           <p className="uppercase tracking-wide text-slate-500 text-sm">

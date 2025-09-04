@@ -2,6 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import mainLogo from "../../../public/images/main-logo.png";
+import { FaInstagram } from "react-icons/fa";
+import { BsTelegram } from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
 
 const FooterLayout = () => {
   const navItems = [
@@ -91,12 +94,23 @@ const FooterLayout = () => {
           {/* Social */}
           <div className="flex flex-col items-center md:items-start">
             <h5 className="text-xl font-bold mb-3">FOLLOW US</h5>
-            <a href="https://instagram.com" className="hover:text-blue-900">
-              Instagram
-            </a>
-            <a href="https://facebook.com" className="hover:text-blue-900">
-              Facebook
-            </a>
+            <div className="flex items-center justify-between gap-3">
+              <a href="https://instagram.com" target="_blank">
+                <BsTelegram className="text-4xl rounded-full text-sky-600 bg-white" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+              >
+                <FaInstagram className="text-4xl rounded-full text-white bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-500 p-2" />
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+              >
+                <FaFacebook className="text-4xl bg-sky-600 rounded-full" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

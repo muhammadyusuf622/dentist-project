@@ -3,7 +3,15 @@ import { useState, useEffect } from "react";
 import mainLogo from "../../../public/images/main-logo.png";
 import Image from "next/image";
 
-const Navbar = () => {
+interface Scrolls {
+  text1: string;
+  text2: string;
+  text3: string;
+  text4?: string;
+  text5?: string;
+}
+
+const Navbar = ({text1, text2, text3, text4, text5}: Scrolls) => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,13 +34,16 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
-  const navItems = [
-    { name: "Home", href: "home" },
-    { name: "About", href: "about" },
-    { name: "Services", href: "services" },
-    { name: "Contact", href: "contact" },
-    { name: "Testimonials", href: "testimonials" },
+  let navItems = [
+    { name: text1, href: text1 },
+    { name: text2, href: text2 },
+    { name: text3, href: text3 },
+    { name: text4, href: text4 },
+    { name: text5, href: text5 },
   ];
+
+  navItems.filter((item) => !!item.name)
+
 
   return (
     <nav
@@ -40,7 +51,7 @@ const Navbar = () => {
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
           <div className="flex items-center space-x-2">
             <Image
@@ -56,12 +67,12 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <span
-                key={item.name}
-                className="text-blue-700/90 cursor-pointer hover:text-blue-900 transition-colors duration-200 font-medium relative group"
+                key={index}
+                className="text-blue-700/90 capitalize cursor-pointer hover:text-blue-900 transition-colors duration-200 font-medium relative group"
                 onClick={() => {
-                  const element = document.getElementById(item.href);
+                  const element = document.getElementById(item.href as string);
                   if (element) {
                     const y =
                       element.getBoundingClientRect().top +
@@ -112,11 +123,22 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-black/70 backdrop-blur-[100px] border-b border-white/30">
             <div className="px-4 py-4 space-y-3">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <span
-                  key={item.name}
+                  key={index}
                   className="block text-white/90 cursor-pointer hover:text-white/70 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    const element = document.getElementById(
+                      item.href as string
+                    );
+                    if (element) {
+                      const y =
+                        element.getBoundingClientRect().top +
+                        window.scrollY -
+                        100;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
                 >
                   {item.name}
                 </span>
