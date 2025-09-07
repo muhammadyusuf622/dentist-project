@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
-  const [excellence, setExcellence] = useState(0);
-  const [satisfaction, setSatisfaction] = useState(0);
-  const [smiles, setSmiles] = useState(4500);
-  const [experts, setExperts] = useState(0);
+  const [excellence, setExcellence] = useState(15);
+  const [satisfaction, setSatisfaction] = useState(98);
+  const [smiles, setSmiles] = useState(5000);
+  const [experts, setExperts] = useState(17);
 
-  useEffect(() => {
-    const incrementCounter = (
-      value: number,
-      setter: any,
-      target: number,
-      interval: number,
-      step = 1
-    ) => {
-      let count = value;
-      const timer = setInterval(() => {
-        count += step;
-        setter((prev: number) => prev + 1);
-        if (count >= target) clearInterval(timer);
-      }, interval);
-    };
+  // useEffect(() => {
+  //   const incrementCounter = (
+  //     value: number,
+  //     setter: any,
+  //     target: number,
+  //     interval: number,
+  //     step = 1
+  //   ) => {
+  //     let count = value;
+  //     const timer = setInterval(() => {
+  //       count += step;
+  //       setter((prev: number) => prev + 1);
+  //       if (count >= target) clearInterval(timer);
+  //     }, interval);
+  //   };
 
-    incrementCounter(excellence, setExcellence, 15, 20);
-    incrementCounter(satisfaction, setSatisfaction, 98, 10);
-    incrementCounter(smiles, setSmiles, 5000, 1);
-    incrementCounter(experts, setExperts, 17, 20);
-  }, []);
+  //   incrementCounter(excellence, setExcellence, 15, 20);
+  //   incrementCounter(satisfaction, setSatisfaction, 98, 10);
+  //   incrementCounter(smiles, setSmiles, 5000, 1);
+  //   incrementCounter(experts, setExperts, 17, 20);
+  // }, []);
 
   return (
     <div id="home">
