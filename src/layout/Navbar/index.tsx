@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import mainLogo from "../../../public/images/main-logo.png";
+import mainLogo from "../../../public/mainlogo.jpg";
 import Image from "next/image";
 
 interface Scrolls {
@@ -61,8 +61,8 @@ const Navbar = ({text1, text2, text3, text4, text5}: Scrolls) => {
               height={50}
               className="rounded-lg"
             />
-            <span className="text-white font-semibold text-lg hidden sm:block">
-              Brand
+            <span className="text-white font-semibold text-2xl hidden sm:block">
+              Dental Map
             </span>
           </div>
 
