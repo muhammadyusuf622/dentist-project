@@ -7,6 +7,12 @@ import {
   AboutSection,
   LocationsSection,
   OurProcess,
+  ReviewsSection,
+  PaymentsSection,
+  InstagramSection,
+  BlogSection,
+  CTASection,
+  FooterDoctor,
 } from "@/components";
 import React from "react";
 
@@ -19,19 +25,17 @@ const Doctor = () => {
 
       <main>
         <HeroSection telegramBotUrl={TELEGRAM_BOT_URL} />
+        <ReviewsSection />
         <AboutSection telegramBotUrl={TELEGRAM_BOT_URL} />
         <ServicesSection />
+        <PaymentsSection telegramBotUrl={TELEGRAM_BOT_URL} />
+        <InstagramSection />
+        <BlogSection />
         <OurProcess telegramBotUrl={TELEGRAM_BOT_URL} />
         <LocationsSection />
+        <CTASection telegramBotUrl={TELEGRAM_BOT_URL} />
+        <FooterDoctor telegramBotUrl={TELEGRAM_BOT_URL} />
       </main>
-
-      <FooterLayout
-        text1="xizmatlar"
-        text2="joylashuvlar"
-        text3="sug'urta"
-        text4="biz haqimizda"
-        text5="aloqa"
-      />
     </div>
   );
 };

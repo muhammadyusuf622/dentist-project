@@ -239,7 +239,7 @@ const LocationsSection: React.FC = () => {
                       window.scrollTo({ top: y, behavior: "smooth" });
                     }
                   }}
-                  className="bg-white cursor-pointer text-teal-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition-colors duration-200"
+                  className="bg-white cursor-pointer text-teal-600 font-semibold px-8 py-2 rounded-tr-4xl rounded-bl-4xl hover:bg-gray-100 transition-colors duration-200"
                 >
                   Joylashuvni topish
                 </button>

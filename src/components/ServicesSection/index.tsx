@@ -144,7 +144,7 @@ const ServicesSection: React.FC = () => {
                   window.scrollTo({ top: y, behavior: "smooth" });
                 }
               }}
-              className="inline-flex items-center cursor-pointer justify-center px-8 py-4 bg-teal-600 text-white font-semibold rounded-full hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center cursor-pointer justify-center px-8 py-4 bg-teal-600 text-white font-semibold rounded-tr-4xl rounded-bl-4xl hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Barcha Dental Map xizmatlarini ko'rish
             </button>
@@ -158,7 +158,7 @@ const ServicesSection: React.FC = () => {
                   window.scrollTo({ top: y, behavior: "smooth" });
                 }
               }}
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-teal-600 text-teal-600 font-semibold rounded-full hover:bg-teal-600 hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-teal-600 text-teal-600 font-semibold rounded-tr-4xl rounded-bl-4xl hover:bg-teal-600 hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Bizga yaqin studiyani toping
             </button>
